@@ -1,0 +1,43 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 3</title>
+</head>
+<body>
+    <input type="text" name="nome">
+    <button id="add">Adicionar</button>
+    <div id="nomes"></div>
+
+    <script>
+        // Lista Estática
+        var nomes = ["Diego", "Gabriel", "Lucas", "Paulo", "Suzana"];
+
+        // Botão adicionar
+        var adicionar = document.querySelector('#add');
+        adicionar.onclick = function () {
+            var li = document.createElement('li');
+            var texto = document.createTextNode(campo.value);
+            li.appendChild(texto);
+            listaNomes.appendChild(li);
+            campo.value = "";
+        }
+
+        //Leitura input nome
+        var campo = document.querySelector("input[name=nome");
+
+        // Leitura container nomes
+        var names = document.querySelector("#nomes");
+
+        // Tabela dinâmica
+        var listaNomes = document.createElement('ul');
+        names.appendChild(listaNomes);
+
+        for (i = 0; i < nomes.length; i++) {
+            var li = document.createElement('li');
+            var c = document.createTextNode(nomes[i]);
+            li.appendChild(c)
+            listaNomes.appendChild(li);
+        };
+    </script>
+</body>
+</html>

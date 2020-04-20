@@ -1,0 +1,23 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 1</title>
+</head>
+<body>
+
+    <div id='app'>
+
+    </div>
+
+    <script>
+        var linkElement = document.createElement('a');
+        linkElement.setAttribute('href', '#');
+
+        var text = document.createTextNode('Funcionou');
+        linkElement.appendChild(text);
+
+        var container = document.querySelector('#app');
+        container.appendChild(linkElement);
+    </script>
+</body>
+</html>

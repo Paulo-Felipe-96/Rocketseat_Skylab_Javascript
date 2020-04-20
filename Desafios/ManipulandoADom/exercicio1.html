@@ -1,0 +1,30 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 1</title>
+</head>
+<body>
+    <div>
+        <button id='botao'>Novo quadrado vermelho</button>
+    </div>
+
+    <div class='box'></div>
+
+    <script>
+        var botao = document.querySelector('#botao');
+        var caixa = document.querySelector('.box');
+
+        botao.onclick = function () {
+            var newElement = document.createElement('div');
+            var paragraph = document.createElement('p');
+
+            newElement.style.width = 100;
+            newElement.style.height = 100;
+            newElement.style.backgroundColor = '#f00';
+
+            newElement.appendChild(paragraph);
+            caixa.appendChild(newElement);
+        }
+    </script>
+</body>
+</html>

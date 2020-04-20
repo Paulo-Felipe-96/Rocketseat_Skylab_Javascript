@@ -1,0 +1,51 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <div>
+        <button id='botao'>Novo quadrado vermelho</button>
+    </div>
+
+    <div class='box'></div>
+
+    <script>
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        var newColor = getRandomColor(); // #E943F0
+
+        var botao = document.querySelector('#botao');
+        var caixa = document.querySelector('.box');
+
+        botao.onclick = function () {
+            var newElement = document.createElement('div');
+            newElement.setAttribute('class', 'newBox');
+            newElement.style.width = 100;
+            newElement.style.height = 100;
+            newElement.style.backgroundColor = '#f00';
+
+            var paragraph = document.createElement('p');
+
+            newElement.appendChild(paragraph);
+            caixa.appendChild(newElement);
+
+            // aqui
+
+            var container = document.querySelector('.newBox');
+            container.onmouseover = function () {
+                newElement.style.backgroundColor = newColor;
+            }
+            container.onmouseout = function () {
+                newElement.style.backgroundColor = '#f00';
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 3</title>
+</head>
+<body>
+    <div id="nomes">
+
+    </div>
+
+    <script>
+        var nomes = ["Diego", "Gabriel", "Lucas", "Paulo", "Suzana"];
+        var nameList = document.querySelector('#nomes');
+        var baseList = document.createElement('ul');
+        nameList.appendChild(baseList);
+
+        for (let i = 0; i < nomes.length; i++) {
+            var li = document.createElement('li');
+            var n = document.createTextNode(nomes[i]);
+            baseList.appendChild(li);
+            li.appendChild(n);
+        };
+    </script>
+</body>
+</html>

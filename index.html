@@ -5,13 +5,20 @@
     <title>Curso Javascript</title>
 </head>
 <body>
-    <script>
-        function exibeAlgo() {
-            console.log('Hello World!');
-        }
+    <div id="app">
+        <input type="text" name="nome" />
+        <button class="botao">Adicionar</button>
+    </div>
 
-        //setInterval(exibeAlgo, 1000);
-        setTimeout(exibeAlgo, 1500);
+    <script>
+        var inputElement = document.querySelector('input[name=nome]');
+        var btnElement = document.querySelector('button.botao');
+
+        btnElement.onclick = function () {
+            var text = inputElement.value;
+
+            alert(text);
+        }
     </script>
 </body>
 </html>

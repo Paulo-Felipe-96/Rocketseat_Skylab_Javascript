@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -6,23 +5,14 @@
 </head>
 <body>
     <div id="app">
-        <input id="nome" />
+        <div class="box"></div>
     </div>
-
     <script>
-        var linkElement = document.createElement('a');
-        linkElement.setAttribute('href', 'http://rocketseat.com.br');
-        linkElement.setAttribute('target', '_blank');
-        linkElement.setAttribute('title', 'Site Rocketseat');
+        var boxElement = document.querySelector('.box');
 
-        var textElement = document.createTextNode('Acessar site da Rocketseat');
-        linkElement.appendChild(textElement);
-
-        var containerElement = document.querySelector('div#app');
-        containerElement.appendChild(linkElement);
-
-        var inputElement = document.querySelector('div#app input#nome');
-        containerElement.removeChild(inputElement);
+        boxElement.style.width = 100;
+        boxElement.style.height = 100;
+        boxElement.style.backgroundColor = '#f00';
     </script>
 </body>
 </html>
